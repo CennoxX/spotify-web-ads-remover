@@ -468,7 +468,7 @@ function onSongResumed()
 
 function checkInterception()
 {
-    var isInterceptionWorking = isFetchInterceptionWorking && isWebScoketInterceptionWorking;
+    var isInterceptionWorking = isFetchInterceptionWorking && (isWebScoketInterceptionWorking || navigator.userAgent.includes("Firefox"));
     if (isInterceptionWorking)
     {
         if (!didCheckForInterception) 
